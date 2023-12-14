@@ -31,6 +31,21 @@ nav {
   padding: 1em 0.5em;
 }
 
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s, border-bottom 0.3s; /* Added transition for a smooth effect */
+  border-bottom: 2px solid transparent; /* Initial border-bottom as transparent */
+}
+
+nav a:hover {
+  color: #ff66b2; /* Pink */
+  border-bottom: 2px solid #ff66b2; /* Stylish border-bottom on hover */
+}
+
+
 nav ul {
   list-style: none;
   margin: 0;
