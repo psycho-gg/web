@@ -1,4 +1,4 @@
-  body {
+body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 header {
-  background-color: #333; /* Purple */
+  background-color: #660066; /* Purple */
   color: #fff;
   text-align: center;
   padding: 4em 0;
@@ -27,7 +27,7 @@ h1 {
 }
 
 nav {
-  background-color: #320; /* Dark Purple */
+  background-color: #330033; /* Dark Purple */
   padding: 1em 0.5em;
 }
 
