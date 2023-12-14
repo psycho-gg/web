@@ -109,3 +109,15 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* Additional styling for responsiveness */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: row; /* Adjusted flex-direction for the menu to be in one line */
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 0 1em;
+  }
+}
