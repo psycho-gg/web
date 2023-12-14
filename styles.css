@@ -8,12 +8,12 @@ body {
 }
 
 header {
-  background-color: #660066; /* Purple */
+header {
+  background-color: #333; /* Change Purple to Dark Gray */
   color: #fff;
   text-align: center;
   padding: 4em 0;
 }
-
 /* Add this style for the banner */
 .banner img {
   width: 100%;
