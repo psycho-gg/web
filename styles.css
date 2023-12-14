@@ -14,7 +14,6 @@ header {
   padding: 4em 0;
 }
 
-/* Add this style for the banner */
 .banner img {
   width: 100%;
   height: auto;
@@ -29,24 +28,43 @@ h1 {
 nav {
   background-color: #330033; /* Dark Purple */
   padding: 1em 0.5em;
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 nav li {
-  display: inline;
   margin-right: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #ff66b2;
 }
 
 section {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2em auto;
   padding: 2em;
+  background-color: #292929;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown {
@@ -72,6 +90,7 @@ section {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 article {
   margin-bottom: 2em;
 }
