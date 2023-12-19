@@ -187,6 +187,7 @@ article:hover h3,
   padding: 2em;
   background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
   position: relative; /* Ensure footer stays at the bottom */
+  overflow: hidden; /* Add this line to fix the white bar issue */
 }
 
 footer p {
@@ -262,7 +263,7 @@ footer a:hover {
     height: 100%;
     z-index: -1;
     background: url('https://as1.ftcdn.net/v2/jpg/05/36/78/84/1000_F_536788448_UcOZv30qCQY36To1ygsjmFmVUaeuc7kf.jpg') center/cover no-repeat fixed;
-    background-size: contain; /* Adjusted background size */
+    background-size: cover; /* Adjusted back to cover for mobile */
     opacity: 0.5;
   }
 }
@@ -295,4 +296,4 @@ footer a:hover {
   #latest-updates article:hover h3 {
     color: #7289da;
   }
-    }
+}
