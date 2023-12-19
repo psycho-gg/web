@@ -11,7 +11,7 @@ body {
 header {
   position: relative;
   overflow: hidden;
-  background-color: #36393f; /* Discord Darker Grey */
+  background-color: rgba(54, 57, 63, 0.8); /* Adjust the alpha value for transparency */
   color: #fff;
   text-align: center;
   padding: 4em 0;
@@ -21,6 +21,7 @@ header {
   position: relative;
   text-align: center;
   overflow: hidden;
+  padding: 2em; /* Add padding to the banner */
 }
 
 .banner img {
@@ -50,9 +51,10 @@ header {
 
 /* Navigation Styling */
 nav {
-  background-color: #2c2f33; /* Discord Dark Grey */
+  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
   padding: 1em 0.5em;
   text-align: center;
+  white-space: nowrap; /* Ensure nav items stay in one line */
 }
 
 nav ul {
@@ -65,12 +67,13 @@ nav ul {
 
 nav li {
   margin-right: 1em;
+  display: inline-block; /* Display nav items in a line */
 }
 
 nav a {
   text-decoration: none;
-  background-color: #7289da; /* Discord Purple */
-  border: 1px solid #7289da; /* Discord Purple */
+  background-color: rgba(44, 47, 51, 0.6); /* Discord Dark Grey with 60% opacity */
+  border: 1px solid rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
   color: white;
   font-size: 1.2em;
   padding: 8px 16px;
@@ -79,55 +82,73 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #36393f; /* Discord Darker Grey */
+  background-color: #7289da; /* Discord Purple */
   color: #fff;
   transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-/* Section Styling */
-section {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 2em;
-  background-color: #2c2f33; /* Discord Dark Grey */
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow */
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
 }
 
-/* Featured Content and YouTube Video Styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #7289da; /* Discord Purple */
+}
+
+/* Section Styling */
+section,
 #featured-content,
-.youtube-video {
+#youtube-section {
+  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
   max-width: 800px;
   margin: 2em auto;
   padding: 2em;
-  background-color: rgba(44, 47, 51, 0.5); /* Discord Dark Grey with 50% transparency */
   color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow */
   backdrop-filter: blur(8px); /* Apply a blur effect to the background for a frosted glass effect */
 }
 
-#featured-content h2,
-.youtube-video h2 {
+h2 {
   color: #7289da;
   text-align: center;
   margin-bottom: 1em;
   font-size: 2em;
 }
 
-#featured-content article,
+article,
 .youtube-video iframe {
   margin-top: 1.5em;
 }
 
-#featured-content h3,
-.youtube-video h3 {
+h3 {
   color: #fff;
   transition: color 0.3s;
 }
 
-#featured-content article:hover h3,
+article:hover h3,
 .youtube-video:hover h3 {
   color: #7289da; /* Discord Purple */
 }
@@ -194,7 +215,7 @@ section {
   bottom: 20px;
   right: 20px;
   display: none;
-  background-color: #7289da;
+  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
   color: white;
   border: none;
   border-radius: 4px;
@@ -206,8 +227,8 @@ section {
 
 #toTopBtn:hover,
 #toTopBtn:active {
-  background-color: #36393f;
-  color: #fff;
+  background-color: #7289da; /* Discord Purple */
+  color: white;
 }
 
 #toTopBtn:hover {
@@ -216,27 +237,27 @@ section {
 }
 
 /* Additional styling for responsiveness */
-@media screen and (max-width:/* 600px) */
+@media screen and (max-width: 600px) {
   #toTopBtn {
     display: block;
   }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: url('https://as1.ftcdn.net/v2/jpg/05/36/78/84/1000_F_536788448_UcOZv30qCQY36To1ygsjmFmVUaeuc7kf.jpg') center/cover no-repeat fixed;
-  background-size: cover; /* Ensure the background covers the entire element */
-  opacity: 0.5; /* Adjust the background overlay opacity */
-}
+  body::before {
+    content: "";
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('https://as1.ftcdn.net/v2/jpg/05/36/78/84/1000_F_536788448_UcOZv30qCQY36To1ygsjmFmVUaeuc7kf.jpg') center/cover no-repeat fixed;
+    background-size: cover; /* Ensure the background covers the entire element */
+    opacity: 0.5; /* Adjust the background overlay opacity */
+  }
 
   /* Custom Styling for the Latest Updates Section */
   #latest-updates {
-    background-color: #2c2f33;
+    background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
     padding: 2em;
     margin: 2em auto;
     border-radius: 8px;
