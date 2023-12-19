@@ -2,31 +2,55 @@ body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1a1a1a;
+  background: linear-gradient(to right top, #23272a, #2c2f33), url('https://as1.ftcdn.net/v2/jpg/05/36/78/84/1000_F_536788448_UcOZv30qCQY36To1ygsjmFmVUaeuc7kf.jpg') center/cover no-repeat fixed;
   color: white;
   line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-  background-color: #660066; /* Purple */
+  position: relative;
+  overflow: hidden;
+  background-color: #36393f; /* Discord Darker Grey */
   color: #fff;
   text-align: center;
   padding: 4em 0;
 }
 
+.banner {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
 .banner img {
   width: 100%;
+  max-width: 1000px; /* Adjust the maximum width for larger screens */
   height: auto;
   border-bottom: 2px solid #ff66b2; /* Pink */
+  border-radius: 8px; /* Add rounded corners to the banner image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+  transition: transform 0.5s ease-in-out; /* Add a smooth zoom effect on hover */
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+.banner:hover img {
+  transform: scale(1.05); /* Zoom in slightly on hover */
 }
 
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow for better readability */
+}
+
+/* Navigation Styling */
 nav {
-  background-color: #330033; /* Dark Purple */
+  background-color: #2c2f33; /* Discord Dark Grey */
   padding: 1em 0.5em;
   text-align: center;
 }
@@ -45,71 +69,197 @@ nav li {
 
 nav a {
   text-decoration: none;
+  background-color: #7289da; /* Discord Purple */
+  border: 1px solid #7289da; /* Discord Purple */
   color: white;
   font-size: 1.2em;
   padding: 8px 16px;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out; /* Add transitions for a smooth effect */
 }
 
 nav a:hover {
+  background-color: #36393f; /* Discord Darker Grey */
   color: #fff;
-  background-color: #ff66b2;
+  transform: scale(1.05); /* Slightly scale up on hover */
 }
 
+/* Section Styling */
 section {
   max-width: 800px;
   margin: 2em auto;
   padding: 2em;
-  background-color: #292929;
+  background-color: #2c2f33; /* Discord Dark Grey */
   color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow */
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #555; /* Dropdown background color */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  display: block;
-  text-decoration: none;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-article {
-  margin-bottom: 2em;
-}
-
-h2 {
-  color: #ff66b2; /* Pink */
-}
-
-.post-meta {
-  color: #ccc;
-  font-size: 0.8em;
-}
-
-footer {
-  background-color: #1a1a1a;
+/* Featured Content and YouTube Video Styling */
+#featured-content,
+.youtube-video {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(44, 47, 51, 0.5); /* Discord Dark Grey with 50% transparency */
   color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow */
+  backdrop-filter: blur(8px); /* Apply a blur effect to the background for a frosted glass effect */
+}
+
+#featured-content h2,
+.youtube-video h2 {
+  color: #7289da;
   text-align: center;
-  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+#featured-content article,
+.youtube-video iframe {
+  margin-top: 1.5em;
+}
+
+#featured-content h3,
+.youtube-video h3 {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#featured-content article:hover h3,
+.youtube-video:hover h3 {
+  color: #7289da; /* Discord Purple */
+}
+
+/* Additional styling for responsiveness */
+@media screen and (max-width: 600px) {
+  /* Navigation Styles */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 0.5em 0;
+    text-align: center; /* Center the text within the menu item */
+  }
+
+  nav a {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+    display: block; /* Ensure each link takes full width */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+  }
+
+  nav a:hover {
+    background-color: #7289da;
+    color: #fff;
+    transform: scale(1.05); /* Slightly scale up on hover */
+  }
+
+  /* Footer Styles */
+  footer {
+    text-align: center; /* Center the text within the footer */
+    padding: 2em;
+    background-color: #2c2f33;
+  }
+
+  footer p {
+    color: #fff;
+    margin: 0.5em 0;
+  }
+
+  footer a {
+    color: #7289da;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+  /* Banner Styles */
+  .banner img {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+}
+
+/* Scroll to Top Button Styles */
+#toTopBtn {
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #7289da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#toTopBtn:hover,
+#toTopBtn:active {
+  background-color: #36393f;
+  color: #fff;
+}
+
+#toTopBtn:hover {
+  background-color: #36393f;
+  color: #fff;
+}
+
+/* Additional styling for responsiveness */
+@media screen and (max-width:/* 600px) */
+  #toTopBtn {
+    display: block;
+  }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('https://as1.ftcdn.net/v2/jpg/05/36/78/84/1000_F_536788448_UcOZv30qCQY36To1ygsjmFmVUaeuc7kf.jpg') center/cover no-repeat fixed;
+  background-size: cover; /* Ensure the background covers the entire element */
+  opacity: 0.5; /* Adjust the background overlay opacity */
+}
+
+  /* Custom Styling for the Latest Updates Section */
+  #latest-updates {
+    background-color: #2c2f33;
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow */
+  }
+
+  #latest-updates h2 {
+    color: #7289da;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+
+  #latest-updates article {
+    margin-top: 1.5em;
+  }
+
+  #latest-updates h3 {
+    color: #fff;
+    transition: color 0.3s;
+  }
+
+  #latest-updates article:hover h3 {
+    color: #7289da;
+  }
 }
