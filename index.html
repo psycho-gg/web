@@ -4,49 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    background: url('https://as2.ftcdn.net/v2/jpg/02/97/79/83/1000_F_297798377_VB9egqGnRKcZxU53wybEHLRnnTrcvlAH.jpg') center/cover no-repeat fixed;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black overlay */
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  header {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(54, 57, 63, 0.8); /* Adjust the alpha value for transparency */
+  color: #fff;
+  text-align: center;
+  padding: 4em 0;
+}
+  
+  nav {
+  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
+}
+
+/* Adjust the transparency of the background */
+section, #featured-content, #latest-updates {
+  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
+}
+
+  /* Existing mobile styles */
+  @media screen and (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav li {
+      margin: 0.5em 0;
+      text-align: center;
+    }
+
+    nav a {
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    nav a:hover {
+      background-color: #7289da;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #2c2f33;
+    }
+
+    footer p {
+      color: #fff;
+      margin: 0.5em 0;
+    }
+
+    footer a {
+      color: #7289da;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .banner img {
+      max-width: 100%;
+    }
+
+    /* Add new mobile styles here */
+    section, #latest-updates, #featured-content {
+      padding: 1em;
+    }
+
+    h1, h2, h3 {
+      font-size: 2em;
+    }
+
+    .youtube-video {
+      padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+    }
+
+    .youtube-video iframe {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .youtube-video:hover iframe {
+      transform: scale(1.05);
+    }
+
+    #toTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: block;
+    }
+  }
+</style>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <title>Iceyrave Web</title>
 </head>
 <body>
-<header>
-  <div class="banner">
-    <!-- Replace the following line with your image source -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg" alt="Banner Image">
-  </div>
-  <h1>Iceyrave Web</h1>
-  <p>Exploring the universe in style</p>
-</header>
-  
-  <nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li class="dropdown">
-      <a href="#">Categories</a>
-      <div class="dropdown-content">
-        <a href="#">Category 1</a>
-        <a href="#">Category 2</a>
-        <a href="#">Category 3</a>
-      </div>
-    </li>
-    <li><a href="#">About</a></li>
-    <li><a href="https://discord.com/invite/KAud235NRw">Discord</a></li>
-  </ul>
-</nav>
+  <header>
+    <div class="banner">
+      <!-- Replace the following line with your image source -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg" alt="Banner Image">
+    </div>
+    <h1>Iceyrave Web</h1>
+    <p class="header-description">Your brief and engaging website description goes here.</p>
+  </header>
 
-  <section id="main-content">
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Categories</a>
+        <div class="dropdown-content">
+          <a href="#">Placeholder 1</a>
+          <a href="#">Placeholder 2</a>
+          <a href="#">Placeholder 3</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://discord.com/invite/KAud235NRw">Discord Server</a></li>
+    </ul>
+  </nav>
+  
+  <section id="latest-updates">
+    <h2>Latest Updates</h2>
+
     <article>
-      <h2>Welcome to My Universe!</h2>
-      <p class="post-meta">Published on December 14, 2023</p>
-      <p>Join me on this journey where purple, pink, and black blend into a unique exploration of ideas and experiences.</p>
+      <h3>Update: "1.69"</h3>
+      <p class="post-meta">Published on December 19, 2023</p>
+      <p>I forgor</p>
     </article>
 
-    <!-- Add more articles as needed -->
+    <article>
+      <h3>Update: "Community Server"</h3>
+      <p class="post-meta">Published on December 20, 2023</p>
+      <p>Join our community server!</p>
+    </article>
+  </section>
+
+  <section id="featured-content">
+    <h2>Featured Content</h2>
+
+    <article>
+      <h3>Featured Article 1</h3>
+      <p class="post-meta">Published on December 16, 2023</p>
+      <p>This is the first featured article with interesting content.</p>
+    </article>
+
+    <article>
+      <h3>Featured Article 2</h3>
+      <p class="post-meta">Published on December 17, 2023</p>
+      <p>Explore more with our second featured article.</p>
+    </article>
+
+    <!-- Add a new featured article -->
+    <article>
+      <h3>New Featured Article</h3>
+      <p class="post-meta">Published on December 18, 2023</p>
+      <p>Check out our latest featured article for amazing insights.</p>
+    </article>
+  </section>
+
+  <!-- New section for the embedded YouTube video -->
+  <section id="youtube-section">
+    <h2>Featured Video</h2>
+    <div class="youtube-video">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" frameborder="0" allowfullscreen></iframe>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2023 Iceyrave. All rights reserved.</p>
+    <p>© 2023 lazy ass. All rights reserved. | <a href="#">Privacy Policy</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <button onclick="topFunction()" id="toTopBtn" title="Go to top">&#9650;</button>
+
+  <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script>
+    // Function to scroll to the top of the page
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+  </script>
 </body>
 </html>
