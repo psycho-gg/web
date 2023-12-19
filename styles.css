@@ -203,55 +203,7 @@ footer a {
 footer a:hover {
   color: #fff;
 }
-
-@media screen and (max-width: 600px) {
-  /* Adjust mobile styles for the footer */
-  footer {
-    background-color: #2c2f33; /* Discord Dark Grey */
-    border-top: none; /* Remove the pink line */
-  }
-}
-
-  /* Banner Styles */
-  .banner img {
-    max-width: 100%; /* Adjust the maximum width for smaller screens */
-  }
-}
-
-/* Scroll to Top Button Styles */
-#toTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-color: rgba(44, 47, 51, 0.8); /* Discord Dark Grey with 80% opacity */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#toTopBtn
-#toTopBtn:hover,
-#toTopBtn:active {
-  background-color: #7289da; /* Discord Purple */
-  color: white;
-}
-
-#toTopBtn:hover {
-  background-color: #36393f;
-  color: #fff;
-}
-
-/* Additional styling for responsiveness */
-@media screen and (max-width: 600px) {
-  #toTopBtn {
-    display: block;
-  }
-
+  
   @media screen and (max-width: 600px) {
   body::before {
     content: "";
